@@ -1,3 +1,7 @@
+function Loaded()
+	loadstring(game:HttpGet(web))()
+	end
+
 local ScreenGui = Instance.new("ScreenGui")
 local Background = Instance.new("Frame")
 local Loader = Instance.new("Frame")
@@ -72,7 +76,7 @@ local function PUJS_fake_script()
 	local bar = script.Parent.Loader.Percentage
 	bar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 20, true)
 	wait(20)
-	loadstring(game:HttpGet(web))()
+	Loaded()
 	wait(3)
 	script.Parent.Parent:Destroy()
 end
